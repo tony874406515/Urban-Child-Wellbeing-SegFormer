@@ -26,7 +26,7 @@ To protect privacy and comply with the licensing terms of the map service provid
 The model parameters (Learning rate, Batch size, Optimizer) are defined in config.json following the experimental setup described in the paper.
 
 2. Training
-To reproduce the training process (assuming you have your own dataset formatted similarly):
+To reproduce the training process:
 
 ```Bash
 python train.py --config config.json
