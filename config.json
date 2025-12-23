@@ -1,0 +1,12 @@
+{
+    "model_name": "nvidia/segformer-b4-finetuned-ade-512-512",
+    "optimizer": "AdamW",
+    "learning_rate": 6e-5,
+    "lr_scheduler": "cosine_schedule_with_warmup",
+    "batch_size": 32,
+    "epochs": 40000,
+    "validation_split": 0.2,
+    "image_size": [512, 512],
+    "small_object_oversampling": true,
+    "metrics": ["mIoU", "Pixel Accuracy"]
+}
