@@ -1,12 +1,30 @@
 {
-    "model_name": "nvidia/segformer-b4-finetuned-ade-512-512",
-    "optimizer": "AdamW",
-    "learning_rate": 6e-5,
-    "lr_scheduler": "cosine_schedule_with_warmup",
-    "batch_size": 32,
-    "epochs": 40000,
-    "validation_split": 0.2,
-    "image_size": [512, 512],
-    "small_object_oversampling": true,
-    "metrics": ["mIoU", "Pixel Accuracy"]
+    "project_name": "CW-SegFormer",
+    "description": "A Value-Based Programming Framework for Enhancing Children’s Well-being using SegFormer-B4",
+    "model_architecture": {
+        "base_model": "nvidia/segformer-b4-finetuned-ade-512-512",
+        "num_classes": 10,
+        "image_size": [512, 512]
+    },
+    "training_parameters": {
+        "optimizer": "AdamW",
+        "learning_rate": 6e-5,
+        "lr_scheduler": "cosine_schedule_with_warmup",
+        "weight_decay": 0.01,
+        "batch_size": 32,
+        "max_epochs": 40000,
+        "validation_split": 0.2,
+        "warmup_steps": 500,
+        "device": "cuda"
+    },
+    "data_strategy": {
+        "small_object_oversampling": true,
+        "oversampling_ratio": 0.5,
+        "augmentation": ["RandomHorizontalFlip", "ColorJitter", "RandomResizedCrop"]
+    },
+    "paths": {
+        "data_root": "./data/weifang_street_view",
+        "output_dir": "./checkpoints/cw_segformer_v1",
+        "log_dir": "./logs"
+    }
 }
