@@ -31,8 +31,6 @@ class CWStreetViewDataset(Dataset):
         Used to create WeightedRandomSampler in training.
         """
         indices = []
-        # In a real scenario, this would load a pre-computed index json
-        # to avoid scanning thousands of images at init.
         return indices 
 
     def __len__(self):
@@ -66,7 +64,6 @@ class CWStreetViewDataset(Dataset):
         weights = []
         for f in self.files:
             # Logic: Check metadata or filename to see if it contains small objects
-            # This implements the 'Oversampling' strategy from the paper.
             weight = 1.0 
             # if contains_small_object(f): weight = 2.0
             weights.append(weight)
