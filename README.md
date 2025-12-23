@@ -14,3 +14,23 @@ The study integrates semantic recognition of street-view imagery (SVI) with mult
 To install the necessary dependencies, run:
 ```bash
 pip install -r requirements.txt
+```
+
+## Data Availability Statement
+To protect privacy and comply with the licensing terms of the map service provider, the raw Street View Imagery (SVI) dataset used in this study is not publicly available in this repository.
+
+**Access to Data:** The street-view image dataset and the trained model weights will be made available upon reasonable request for academic research purposes. Researchers interested in accessing the data should contact the corresponding author. Access is subject to the signing of a Data Usage Agreement and compliance with local data protection regulations.
+
+## Usage
+1. Configuration
+The model parameters (Learning rate, Batch size, Optimizer) are defined in config.json following the experimental setup described in the paper.
+
+2. Training
+To reproduce the training process (assuming you have your own dataset formatted similarly):
+
+```Bash
+python train.py --config config.json
+```
+
+## citation
+If you find this code or research useful, please cite our paper: TBD
