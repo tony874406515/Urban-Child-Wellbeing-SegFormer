@@ -16,6 +16,10 @@ To install the necessary dependencies, run:
 pip install -r requirements.txt
 ```
 
+## Pre-trained Models
+The trained CW-SegFormer model weights (fine-tuned on the Weifang Sub-district dataset) are hosted in the master branch of this repository.
+* **`Access Weights`**: Switch to the master branch to download the model files.
+
 ## Data Availability Statement
 To protect privacy and comply with the licensing terms of the map service provider, the raw Street View Imagery (SVI) dataset used in this study is not publicly available in this repository.
 
